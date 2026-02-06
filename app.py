@@ -68,7 +68,7 @@ def fetch_historical_data(stock_symbol):
 
 # Function to preprocess the data
 def preprocess_data(data):
-    data = data.drop(columns=["Adj Close"])
+    data = data.drop(columns=["Adj Close"], errors="ignore")
     data = data.round(2)
     return data
 
